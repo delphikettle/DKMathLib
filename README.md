@@ -1,2 +1,2 @@
 # DKMathLib
-The Developmment Kit with the open-sourse Mathematical Library.
+The Development Kit with the open-source Mathematical Library.
