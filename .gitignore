@@ -3,14 +3,6 @@
 build/
 
 *.class
-
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -26,3 +18,9 @@ hs_err_pid*
 *.ipr
 *.iml
 *.iws
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle/wrapper/gradle-wrapper.jar
