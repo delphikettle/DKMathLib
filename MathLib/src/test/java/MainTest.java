@@ -7,7 +7,7 @@ public class MainTest extends TestCase {
     }
 
     public void testMain() {
-
+        System.out.println("Testing;");
     }
 
     @Override
