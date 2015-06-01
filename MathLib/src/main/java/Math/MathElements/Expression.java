@@ -2,5 +2,5 @@ package Math.MathElements;
 
 import Math.MathElement;
 
-public class Expression extends MathElement {
+public abstract class Expression extends MathElement {
 }
