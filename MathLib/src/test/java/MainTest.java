@@ -1,4 +1,5 @@
 import junit.framework.TestCase;
+import ru.dk.Math.MathSpace;
 
 public class MainTest extends TestCase {
     @Override
@@ -8,6 +9,7 @@ public class MainTest extends TestCase {
 
     public void testMain() {
         System.out.println("Testing;");
+        MathSpace mathSpace = new MathSpace();
     }
 
     @Override
