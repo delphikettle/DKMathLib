@@ -1,6 +1,7 @@
 package ru.dk.Math.MathElements.Expressions;
 
 import ru.dk.Math.MathElements.Expression;
+import ru.dk.Math.MathSettings;
 
 
 public class Variable extends Expression {
@@ -10,6 +11,10 @@ public class Variable extends Expression {
     public Variable(String name, Expression value) {
         this.name = name;
         this.value = value;
+    }
+
+    public Variable(char name, Expression value) {
+        this("" + name, value);
     }
 
     public String getName() {
@@ -37,5 +42,10 @@ public class Variable extends Expression {
     @Override
     public String toString() {
         return this.getValue().toString();
+    }
+
+    @Override
+    public String toString(MathSettings settings) {
+        return value.toString(settings);
     }
 }
