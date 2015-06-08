@@ -23,4 +23,9 @@ public class Countable<TYPE extends Number> extends Expression {
     public String toString(MathSettings settings) {
         return this.toString();
     }
+
+    @Override
+    public boolean isCountable() {
+        return true;
+    }
 }

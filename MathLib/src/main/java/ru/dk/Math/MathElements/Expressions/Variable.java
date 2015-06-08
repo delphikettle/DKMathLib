@@ -48,4 +48,9 @@ public class Variable extends Expression {
     public String toString(MathSettings settings) {
         return value.toString(settings);
     }
+
+    @Override
+    public boolean isCountable() {
+        return value.isCountable();
+    }
 }

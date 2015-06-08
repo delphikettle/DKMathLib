@@ -1,5 +1,4 @@
 package ru.dk.Math;
-
 public final class GlobalMath {
     private static MathSpace currentMathSpace;
 
