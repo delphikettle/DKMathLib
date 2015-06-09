@@ -11,7 +11,7 @@ public abstract class UnaryOperator extends Operator {
         super(new OperatorForm[]{
                 new OperatorForm(new OperatorElement[]{
                         sign,
-                        new OperatorExpression()
+                        new OperatorExpression("arg")
                 })
         });
     }

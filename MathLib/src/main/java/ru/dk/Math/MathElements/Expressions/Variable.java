@@ -53,4 +53,9 @@ public class Variable extends Expression {
     public boolean isCountable() {
         return value.isCountable();
     }
+
+    @Override
+    public <TYPE extends Number> Countable<TYPE> count() {
+        return null;
+    }
 }

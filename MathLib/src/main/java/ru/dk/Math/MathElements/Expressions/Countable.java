@@ -28,4 +28,9 @@ public class Countable<TYPE extends Number> extends Expression {
     public boolean isCountable() {
         return true;
     }
+
+    @Override
+    public <T extends Number> Countable<T> count() {
+        return null;
+    }
 }

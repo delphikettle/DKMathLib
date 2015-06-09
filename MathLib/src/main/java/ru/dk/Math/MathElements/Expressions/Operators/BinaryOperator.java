@@ -10,9 +10,9 @@ public abstract class BinaryOperator extends Operator {
     protected BinaryOperator(OperatorSign sign) {
         super(new OperatorForm[]{
                 new OperatorForm(new OperatorElement[]{
-                        new OperatorExpression(),
+                        new OperatorExpression("arg1"),
                         sign,
-                        new OperatorExpression()
+                        new OperatorExpression("arg2")
                 })
         });
     }
