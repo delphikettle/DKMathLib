@@ -1,5 +1,7 @@
 package ru.dk.Math.MathElements;
 
-public abstract class OperatorElement {
+import ru.dk.Math.MathElement;
+
+public abstract class OperatorElement extends MathElement {
     protected OperatorElementType type;
 }

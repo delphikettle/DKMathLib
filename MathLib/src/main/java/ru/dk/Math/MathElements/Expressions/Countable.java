@@ -30,7 +30,8 @@ public class Countable<TYPE extends Number> extends Expression {
     }
 
     @Override
-    public <T extends Number> Countable<T> count() {
-        return null;
+    protected <T extends Number> Countable<T> count() {
+        return new Countable<T>((T) this.getValue());
     }
+
 }

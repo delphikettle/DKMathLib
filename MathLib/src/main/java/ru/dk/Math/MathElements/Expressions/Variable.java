@@ -1,6 +1,7 @@
 package ru.dk.Math.MathElements.Expressions;
 
 import ru.dk.Math.MathElements.Expression;
+import ru.dk.Math.MathExceptions.ExpressionIsNotCountable;
 import ru.dk.Math.MathSettings;
 
 
@@ -31,7 +32,7 @@ public class Variable extends Expression {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return new Variable(this.getName(), this.getValue());
+        return new Variable(this.getName() + "_c", this.getValue());
     }
 
     @Override
@@ -55,7 +56,12 @@ public class Variable extends Expression {
     }
 
     @Override
-    public <TYPE extends Number> Countable<TYPE> count() {
-        return null;
+    protected <T extends Number> Countable<T> count() {
+        try {
+            return value.calculate();
+        } catch (ExpressionIsNotCountable expressionIsNotCountable) {
+            System.out.println("Так быть не должно!");
+            throw new RuntimeException();
+        }
     }
 }
