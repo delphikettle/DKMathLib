@@ -1,4 +1,4 @@
-package ru.dk.Math;
+package ru.dk.Math.MathSpace;
 
 import ru.dk.Math.MathElements.Expressions.Variable;
 import ru.dk.Math.MathExceptions.VariableExceptions.SameVariableException;
@@ -7,6 +7,9 @@ import ru.dk.Math.MathExceptions.VariableExceptions.UnknownVariableException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The type Math space.
+ */
 public class MathSpace {
     private final Map<String, Variable> variables = new HashMap<String, Variable>();
 
@@ -14,7 +17,7 @@ public class MathSpace {
      * Adds the variable given as argument
      *
      * @param variable variable that must be added
-     * @throws SameVariableException
+     * @throws SameVariableException the same variable exception
      */
     public void addVariable(Variable variable) throws SameVariableException {
         if (variables.containsKey(variable.getName()) || variables.containsValue(variable))
@@ -26,7 +29,7 @@ public class MathSpace {
      * Finds and returns the variable with the given name
      * @param name name of the variable that must be given
      * @return the variable with the given name
-     * @throws UnknownVariableException
+     * @throws UnknownVariableException the unknown variable exception
      */
     public Variable getVariable(String name) throws UnknownVariableException {
         if (!variables.containsKey(name))

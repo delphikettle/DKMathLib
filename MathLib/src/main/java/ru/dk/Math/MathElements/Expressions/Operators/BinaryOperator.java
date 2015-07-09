@@ -7,7 +7,16 @@ import ru.dk.Math.MathElements.OperatorElements.OperatorExpression;
 import ru.dk.Math.MathElements.OperatorElements.OperatorSign;
 import ru.dk.Math.MathElements.OperatorForm;
 
+/**
+ * The type Binary operator.
+ */
 public abstract class BinaryOperator extends Operator {
+    /**
+     * Instantiates a new Binary operator.
+     *
+     * @param sign       the sign
+     * @param calculator the calculator
+     */
     protected BinaryOperator(OperatorSign sign, Calculator calculator) {
         super(new OperatorForm[]{
                 new OperatorForm(new OperatorElement[]{

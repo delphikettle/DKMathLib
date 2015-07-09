@@ -1,5 +1,17 @@
 package ru.dk.Math.MathElements;
 
+/**
+ * The enum Operator element type.
+ */
 public enum OperatorElementType {
-    Expression, KeyWord, Sign
+    /**
+     * The Expression.
+     */
+    Expression, /**
+     * The KeyWord.
+     */
+    KeyWord, /**
+     * The Sign.
+     */
+    Sign
 }

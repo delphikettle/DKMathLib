@@ -7,7 +7,16 @@ import ru.dk.Math.MathElements.OperatorElements.OperatorKeyWord;
 import ru.dk.Math.MathElements.OperatorElements.OperatorSign;
 import ru.dk.Math.MathElements.OperatorForm;
 
+/**
+ * The type Function.
+ */
 public abstract class Function extends Operator {
+    /**
+     * Instantiates a new Function.
+     *
+     * @param name       the name
+     * @param calculator the calculator
+     */
     protected Function(OperatorKeyWord name, Calculator calculator) {
         super(new OperatorForm[]{
                 new OperatorForm(new OperatorElement[]{

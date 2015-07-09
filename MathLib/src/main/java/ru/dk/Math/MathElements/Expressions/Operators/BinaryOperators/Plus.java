@@ -8,7 +8,13 @@ import ru.dk.Math.MathElements.OperatorElements.OperatorSign;
 
 import java.util.Map;
 
+/**
+ * The type Plus.
+ */
 public class Plus extends BinaryOperator {
+    /**
+     * Instantiates a new Plus.
+     */
     protected Plus() {
         super(new OperatorSign("+"), new Calculator() {
             public Countable calculate(Map<String, Expression> arguments) {

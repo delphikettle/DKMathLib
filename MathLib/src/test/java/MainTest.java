@@ -2,7 +2,7 @@ import junit.framework.TestCase;
 import ru.dk.Math.MathElements.Expressions.Countable;
 import ru.dk.Math.MathElements.Expressions.Variable;
 import ru.dk.Math.MathExceptions.VariableException;
-import ru.dk.Math.MathSpace;
+import ru.dk.Math.MathSpace.MathSpace;
 
 
 public class MainTest extends TestCase {
