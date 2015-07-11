@@ -67,16 +67,6 @@ public class Variable extends Expression {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return new Variable(this.getName() + "_c", this.getValue());
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return this.getValue().equals(((Variable) obj).getValue());
-    }
-
-    @Override
     public String toString() {
         return this.getValue().toString();
     }
