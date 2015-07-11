@@ -19,10 +19,11 @@ public class MathSpace {
      * @param variable variable that must be added
      * @throws SameVariableException the same variable exception
      */
-    public void addVariable(Variable variable) throws SameVariableException {
+    public Variable addVariable(Variable variable) throws SameVariableException {
         if (variables.containsKey(variable.getName()) || variables.containsValue(variable))
             throw new SameVariableException(variable);
         variables.put(variable.getName(), variable);
+        return variable;
     }
 
     /**

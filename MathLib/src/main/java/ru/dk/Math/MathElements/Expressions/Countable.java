@@ -1,6 +1,7 @@
 package ru.dk.Math.MathElements.Expressions;
 
 import ru.dk.Math.MathElements.Expression;
+import ru.dk.Math.MathExceptions.IncompatibleNumberTypes;
 import ru.dk.Math.MathSettings;
 
 /**
@@ -9,6 +10,11 @@ import ru.dk.Math.MathSettings;
  * @param <TYPE> the type parameter
  */
 public class Countable<TYPE extends Number> extends Expression {
+    /*
+    TODO Countable must contain number information
+    TODO Countable must have plus, minus, multiply and division methods
+     */
+
     /**
      * The Value.
      */
@@ -48,8 +54,12 @@ public class Countable<TYPE extends Number> extends Expression {
     }
 
     @Override
-    protected <T extends Number> Countable<T> count() {
-        return new Countable<T>((T) this.getValue());
+    protected <T extends Number> Countable<T> count() throws IncompatibleNumberTypes {
+        try {
+            return new Countable<T>((T) this.getValue());
+        } catch (ClassCastException e) {
+            throw new IncompatibleNumberTypes();
+        }
     }
 
 }

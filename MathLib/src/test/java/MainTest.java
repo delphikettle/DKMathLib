@@ -1,6 +1,8 @@
 import junit.framework.TestCase;
 import ru.dk.Math.MathElements.Expressions.Countable;
 import ru.dk.Math.MathElements.Expressions.Variable;
+import ru.dk.Math.MathExceptions.ExpressionIsNotCountable;
+import ru.dk.Math.MathExceptions.IncompatibleNumberTypes;
 import ru.dk.Math.MathExceptions.VariableException;
 import ru.dk.Math.MathSpace.MathSpace;
 
@@ -19,9 +21,9 @@ public class MainTest extends TestCase {
         System.out.println(mathSpace.getVariable("a").toString());
     }
 
-    public void testCountables() throws VariableException {
-        mathSpace.addVariable(new Variable("x", new Countable<Integer>(100)));
-        assertTrue(mathSpace.getVariable("x").isCountable());
+    public void testCountables() throws VariableException, ExpressionIsNotCountable, IncompatibleNumberTypes {
+        Variable x = mathSpace.addVariable(new Variable("x", new Countable<Integer>(100)));
+        Variable x1 = mathSpace.addVariable(new Variable("x1", x.calculate()));
     }
 
     public void test00() throws VariableException {

@@ -2,6 +2,7 @@ package ru.dk.Math.MathElements.Expressions;
 
 import ru.dk.Math.MathElements.Expression;
 import ru.dk.Math.MathExceptions.ExpressionIsNotCountable;
+import ru.dk.Math.MathExceptions.IncompatibleNumberTypes;
 import ru.dk.Math.MathSettings;
 
 
@@ -82,7 +83,7 @@ public class Variable extends Expression {
     }
 
     @Override
-    protected <T extends Number> Countable<T> count() {
+    protected <T extends Number> Countable<T> count() throws IncompatibleNumberTypes {
         try {
             return value.calculate();
         } catch (ExpressionIsNotCountable expressionIsNotCountable) {

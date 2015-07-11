@@ -1,5 +1,5 @@
 group 'ru.dk.DKMathLib'
-version '0.0.0.009'
+version '0.0.0.00a'
 
 apply plugin: 'java'
 
